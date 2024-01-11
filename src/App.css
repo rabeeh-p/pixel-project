@@ -1,38 +1,387 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header section */
+.header{
   display: flex;
-  flex-direction: column;
+  background-color: skyblue;
+  height: 90px;
+  /* justify-content: space-between; */
+
+}
+
+.logo{
+ width: 239px;
+ display: flex;
+ align-items: center;
+background-color: #fff;
+position: relative;
+overflow-y: hidden;
+}
+
+
+
+.logo img{
+  width: auto;
+  height: 50px;
+  margin-left: 60px;
+}
+.nav-box{
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin-left: 750px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 15px 15px;
+  margin: 0;
+  
+}
+.box h5{
+  background-color: rgb(201, 191, 191);
+  padding: 8px 9px;
+  border-radius: 9px;
+  margin-left: 800px;
+  font-size: 12px;
+}
+
+
+/* Sidebar */
+
+.container{
+  display: flex;
+}
+
+main{
+  width: 100%;
+  padding: 20px;
+  /* background-color: rgb(185, 150, 150); */
+}
+
+.sidebar{
+  background-color: #fff;
+  height: 100vh;
+  color: #181515;
+  width: 300px;
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+                    15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+.link{
+  display: flex;
+  color: rgb(10, 9, 9);
+  padding: 5px 15px ;
+  text-decoration: none;
+  font-size: 25px;
+  font-style: italic;
+  margin-top: 20px;
+  transition: all  0.5s;
+  gap: 15px;
+  /* background-color: red; */
+}
+
+.link:hover{
+  background-color: rgb(157, 160, 161);
+  color: #000;
+  border-radius: 10px;
+  transition: all  0.5s;
+
+}
+
+.active{
+  background-color:rgb(105, 136, 149);
+  color: #000;
+  border: none;
+}
+.icon, .link-text{
+  font-size: 20px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+
+
+.profile{
+  width: 200px;
+  height: 150px;
+  /* background-color: red; */
+  text-align: center;
+  margin: auto;
+}
+.profile img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-top: 40px;
+}
+
+.profile h4{
+  display: block;
+  margin-top: 6px;
+  font-style: oblique;
+}
+/* .profile h6{
+} */
+
+
+.logout{
+  /* background-color: red; */
+  /* position: relative; */
+  height: 40px;
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logout button{
+  padding: 5px 27px;
+  font-size: 15px;
+  font-style: italic;
+  border-radius: 10px;
+  border: none;
+}
+.logout button:hover{
+  cursor: pointer;
+}
+.logout-icon{
+  position: relative;
+  left: 149px;
+  margin-top: -28px;
+}
+
+
+/* dashboard */
+
+.heading{
+  /* background-color: red; */
+  margin: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main-container{
+  /* background-color: red; */
+  width: 100%;
+  height: 100px;
+
+}
+.switch{
+  margin-left: 700px;
+  border: 1px solid;
+  width: 140px;
+  padding: 3px 2px;
+  border-radius: 15px;
+}
+.switch button{
+  border-radius: 50px;
+  padding: 3px 9px;
+  border: none;
+  /* background-color: rgb(185, 150, 150) ; */
+  /* background-color:  #f5f5f5; */
+}
+.switch button:hover{
+  background-color: skyblue;
+  cursor: pointer;
+
+}
+
+.card{
+  background-color:  #f5f5f5;
+  width: 250px;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 40px;
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+                    15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+.title{
+  color: black;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 25px;
+}
+.card .old-price{
+  /* color: black; */
+  margin-left: 10px;
+  /* text-decoration: line-through; */
+  color: black;
+  position: relative;
+  display: inline-block;
+  
+}
+.old-price:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 100%;
+  height: 0.2px; /* Adjust the thickness of the line */
+  background-color: red; 
+  transform: rotate(5deg);
+  /* transform-origin: 100% 0px; */
+}
+
+
+
+.card h2{
+  /* margin: 10px; */
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.btn1{
+  margin: 8px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: 10px;
+  background-color: #b29a9ad3;
+}
+.btn3{
+  margin: 10px;
+  /* margin-top: 5px; */
+  /* margin-left: 10px; */
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: 10px;
+  background-color: #b15a5ad3;
+
+}
+.btn2{
+  margin: 8px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: 10px;
+  background-color: #a748b0d3;
+  
+}
+
+.details{
+  color: black;
+  font-size: 10px;
+  margin-top: 10px;
+}
+.points{
+  margin: 10px;
+}
+.points h6{
+  color: black;
+  margin-top: 6px;
+  
+}
+.link-tag{
+  margin: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: underline;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+
+}
+.nav-box h5 {
+  background-color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.nav-box .h3{
+  background-color: #fff;
   color: white;
+  margin-left: 6px;
+  padding: 3px 5px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 607px) {
+  .header {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .logo{
+    background-color: skyblue;
+    height: auto;
+    margin: 0 auto;
+    width: auto;
+    padding: 10px;
+    
   }
+  .logo img{
+    width: 50px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .box{
+    width: auto;
+   display: flex;
+   flex-direction: column; 
+  }
+  main{
+    width: auto;
+  }
+  .sidebar {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+      font-size: 15px;
+      width: 150px;
+      height: 150vh;
+  }
+  .link{
+    font-size: 20px;
+    
+  }
+  .dashboard{
+    width: 250px;
+    height: auto;
+  }
+  .box{
+    width: 200px;
+    display: flex; 
+    margin: 10px;
+    padding: 0;
+  }
+  .logout{
+    margin-top: 100px;
+  }
+  .link{
+    margin-top: 50px;
+  }
+  
+  .card{
+    width: 200px;
+    height: auto;
+    margin: 10px;
+  }
+  .heading{
+    font-size: 10px;
+    font-style: italic;
+  }
+  .details h4{
+    font-size: 20px;
+  }
+  .switch{
+    margin: 0;
+  }
+  .nav-box{
+    width: 150px;
+    margin: 10px auto;
+    font-size: 15px;
+  }
+  
 }
